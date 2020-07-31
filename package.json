@@ -1,0 +1,52 @@
+{
+  "name": "masquerades",
+  "version": "0.0.1-alpha.5",
+  "description": "A library for styled web components",
+  "main": "dist/main.js",
+  "esnext": "src/main.js",
+  "types": "types/main.d.ts",
+  "scripts": {
+    "lint": "eslint src/main.js",
+    "build": "rollup -c rollup.plugin.js",
+    "generate-declaration": "jsdoc -t node_modules/tsd-jsdoc/dist -r ./dist/plugin.js -d ./dist/",
+    "prepare": "npm run build",
+    "test": "jest --coverage",
+    "storybook": "start-storybook -p 9001",
+    "storybook:build": "build-storybook -o _site -s storybook-static",
+    "site:build": "npm run storybook:build"
+  },
+  "author": "Alfredo Salzillo",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alfredosalzillo/masquerade"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@open-wc/demoing-storybook": "^0.3.0",
+    "@storybook/addon-actions": "latest",
+    "@types/jest": "^24.0.12",
+    "babel-jest": "^24.5.0",
+    "babel-preset-airbnb": "^3.0.1",
+    "core-js": "2.6.5",
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-class-property": "^1.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.4.1",
+    "jest": "^24.5.0",
+    "rollup": "^1.19.4",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.0.2",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "@storybook/polymer": "latest",
+    "haunted": "^4.5.1",
+    "lit-html": "^1.1.1"
+  },
+  "dependencies": {
+    "lorem-ipsum": "^2.0.3",
+    "stylis": "^3.5.4"
+  }
+}
